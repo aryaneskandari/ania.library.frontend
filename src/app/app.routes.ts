@@ -10,12 +10,16 @@ import { LibrariansBooksComponent } from './+pages/+librarians/librarians-books/
 import { LibrariansMembersComponent } from './+pages/+librarians/librarians-members/librarians-members.component';
 import { AdminsHomeComponent } from './+pages/+admins/admins-home/admins-home.component';
 import { AdminsLibrariansComponent } from './+pages/+admins/admins-librarians/admins-librarians.component';
+import { AdminLoginComponent } from './+pages/+public/admin-login/admin-login.component';
+import { LibrarianLoginComponent } from './+pages/+public/librarian-login/librarian-login.component';
 
 export const routes: Routes = [
   {path:'public',component:PublicNavComponent,children:[
     {path:'home',component:PublicHomeComponent},
     {path:'books',component:PublicBooksComponent},
     {path:'members',component:PublicMembersComponent},
+    {path:'adminlogin',component:AdminLoginComponent},
+    {path:'librarianlogin',component:LibrarianLoginComponent},
     {path:'',redirectTo:'home',pathMatch:'prefix'},
     {path:'**',redirectTo:'home'}
   ]},
