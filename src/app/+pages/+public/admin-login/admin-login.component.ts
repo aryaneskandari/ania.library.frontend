@@ -7,7 +7,7 @@ import { MatSelectModule } from '@angular/material/select';
 import { MatRadioModule } from '@angular/material/radio';
 import { MatCardModule } from '@angular/material/card';
 import { MatIconModule } from '@angular/material/icon';
-import {} from '@angular/material/form-field';
+import {MatFormFieldModule} from '@angular/material/form-field';
 
 @Component({
   selector: 'app-admin-login',
@@ -25,7 +25,7 @@ import {} from '@angular/material/form-field';
     MatCardModule,
     MatButtonModule,
     FormsModule,
-    
+    MatFormFieldModule
 
   ]
 })

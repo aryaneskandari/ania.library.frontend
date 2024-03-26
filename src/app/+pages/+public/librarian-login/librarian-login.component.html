@@ -1,32 +1,35 @@
-<form [formGroup]="loginForm" novalidate >
-  <mat-card class="shipping-card">
-    <mat-card-header>
-      <mat-card-title>Librarian's Login</mat-card-title>
-    </mat-card-header>
-    <mat-card-content>
-      <div class="row">
-        <div class="col">
-          <mat-form-field class="full-width">
-            <input matInput placeholder="Username" formControlName="username">
-            @if (loginForm.controls['username'].hasError('required')) {
-              <mat-error>Username is <strong>required</strong></mat-error>
-            }
-          </mat-form-field>
-        </div>
-      </div>
-      <div class="row">
-        <div class="col">
-          <mat-form-field class="full-width">
-            <input matInput placeholder="Password" formControlName="password">
-            @if (loginForm.controls['password'].hasError('required')) {
-              <mat-error>Address is <strong>required</strong></mat-error>
-            }
-          </mat-form-field>
-        </div>
-      </div>
-    </mat-card-content>
-    <mat-card-actions>
-      <button mat-raised-button color="primary" type="submit">Submit</button>
-    </mat-card-actions>
-  </mat-card>
-</form>
+<section class="bg-gray-200 flex items-center justify-center h-screen   ">
+  <section class="bg-white p-8 rounded-lg shadow-md w-90">
+    <h1 class="text-2xl font-semibold mb-4 font-header text-center ">ورود کتابداران</h1>
+    <form [formGroup]="loginForm" novalidate>
+      <section class="">
+        <label for="password" class="block text-sm font-medium font-titles text-gray-500 "> نام کاربری : </label>
+        <mat-icon  class="text-blue-400 align-middle absolute mr-2 mt-4  ">email</mat-icon>
+        <input matInput type="text" id="username" name="username"
+        class=" font-header text-gray-700 mt-1 p-3 pr-10  rounded-md border
+         border-blue-400 outline-none " formControlName="username">
+        @if (loginForm.controls.username.invalid &&
+        (loginForm.controls.username.dirty || loginForm.controls.username.touched)) {
+          <mat-error class="block font-header text-red-500 text-xs m-2  ">نام کاربری  <strong>الزامیست</strong></mat-error>
+        }
+      </section>
+      <section class="mt-2">
+        <label for="password" class="block text-sm font-medium font-titles text-gray-500 "> کلمه عبور : </label>
+        <mat-icon  class="text-blue-400 align-middle absolute mr-2 mt-4  ">lock</mat-icon>
+        <input matInput type="password" id="password" name="password" class="font-header text-gray-700 mt-1 p-3 pr-10  rounded-md border border-blue-400 outline-none " formControlName="password">
+        @if (loginForm.controls.password.invalid &&
+        (loginForm.controls.password.dirty || loginForm.controls.password.touched)) {
+          <mat-error class="block font-header text-red-500 text-xs m-2  "> کلمه عبور  <strong>الزامیست</strong></mat-error>
+        }
+      </section>
+      <button [disabled]="!loginForm.valid" class="bg-blue-500 text-white p-2 w-full rounded-md mt-3 hover:bg-blue-600 disabled:bg-gray-400 ">ورود</button>
+    </form>
+    <section class="text-center mt-2 ">
+      <button >
+        <span class="font-titles text-sm text-blue-700 text-center ">
+          کلمه عبور فراموش کردی ؟
+        </span>
+      </button>
+    </section>
+  </section>
+</section>
