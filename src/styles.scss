@@ -5,3 +5,12 @@ body { margin: 0;}
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@font-face {
+  font-family:'PeydaSemiBold' ;
+  src: url('./assets/fonts/PeydaWebFaNum-SemiBold.woff');
+}
+@font-face {
+  font-family: 'PeydaExLight';
+  src: url('./assets/fonts/PeydaWebFaNum-ExtraLight.woff');
+}

@@ -1,32 +1,18 @@
-<form [formGroup]="loginForm" novalidate >
-  <mat-card class="shipping-card">
-    <mat-card-header>
-      <mat-card-title>Admin's Login</mat-card-title>
-    </mat-card-header>
-    <mat-card-content>
-      <div class="row">
-        <div class="col">
-          <mat-form-field class="full-width">
-            <input matInput placeholder="Username" formControlName="username">
-            @if (loginForm.controls['username'].hasError('required')) {
-              <mat-error>username is <strong>required</strong></mat-error>
-            }
-          </mat-form-field>
-        </div>
-      </div>
-      <div class="row">
-        <div class="col">
-          <mat-form-field class="full-width">
-            <input matInput placeholder="Password" formControlName="password">
-            @if (loginForm.controls['password'].hasError('required')) {
-              <mat-error>password is <strong>required</strong></mat-error>
-            }
-          </mat-form-field>
-        </div>
-      </div>
-    </mat-card-content>
-    <mat-card-actions>
-      <button mat-raised-button color="primary" type="submit">Submit</button>
-    </mat-card-actions>
-  </mat-card>
-</form>
+<section class="bg-gray-200 flex items-center justify-center h-screen   ">
+  <section class="bg-white p-8 rounded-lg shadow-md w-90">
+    <h1 class="text-2xl font-semibold mb-4 font-header text-center ">ورود مدیران</h1>
+    <form >
+      <section class="">
+        <label for="password" class="block text-sm font-medium font-titles text-gray-500 ">نام کاربری</label>
+        <mat-icon  class="text-blue-400 align-middle absolute mr-2 mt-3  ">email</mat-icon>
+        <input matInput type="text" id="username" name="username" class=" font-header text-gray-700 mt-1 p-2 pr-10  rounded-md border border-blue-400 outline-none ">
+      </section>
+      <section class="">
+        <label for="password" class="block text-sm font-medium font-titles text-gray-500 ">کلمه عبور</label>
+        <mat-icon  class="text-blue-400 align-middle absolute mr-2 mt-3  ">lock</mat-icon>
+        <input matInput type="password" id="password" name="password" class="font-header text-gray-700 mt-1 p-2 pr-10  rounded-md border border-blue-400 outline-none ">
+      </section>
+      <button class="bg-blue-500 text-white p-2 w-full rounded-md mt-3 hover:bg-blue-600">ورود</button>
+    </form>
+  </section>
+</section>
