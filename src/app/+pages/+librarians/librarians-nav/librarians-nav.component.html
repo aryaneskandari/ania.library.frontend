@@ -5,10 +5,30 @@
       [opened]="(isHandset$ | async) === false">
     <mat-toolbar>Librarians</mat-toolbar>
     <mat-nav-list>
-      <a mat-list-item routerLink="home">Home</a>
-      <a mat-list-item routerLink="books">Books</a>
-      <a mat-list-item routerLink="borrows">Borrows</a>
-      <a mat-list-item routerLink="members">Members</a>
+      <a mat-list-item routerLink="home">
+        <mat-icon matListItemIcon >home</mat-icon>
+        <span class="font-header text-gray-500 ">
+          صفحه اصلی
+        </span>
+      </a>
+      <a mat-list-item routerLink="home">
+        <mat-icon matListItemIcon >library_books</mat-icon>
+        <span class="font-header text-gray-500 ">
+           کتابها
+        </span>
+      </a>
+      <a mat-list-item routerLink="home">
+        <mat-icon matListItemIcon >swap_vert</mat-icon>
+        <span class="font-header text-gray-500 ">
+           امانات
+        </span>
+      </a>
+      <a mat-list-item routerLink="home">
+        <mat-icon matListItemIcon >local_library</mat-icon>
+        <span class="font-header text-gray-500 ">
+           کتابداران
+        </span>
+      </a>
     </mat-nav-list>
   </mat-sidenav>
   <mat-sidenav-content>
@@ -22,7 +42,7 @@
           <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
         </button>
       }
-      <span>Novin.Library_two.Frontend</span>
+      <span>Novin Library</span>
     </mat-toolbar>
     <section>
       <router-outlet/>
