@@ -1,0 +1,70 @@
+
+<section class="bg-gray-100 flex items-center justify-center h-screen   ">
+
+  <section class="bg-white p-8 rounded-lg shadow-lg w-90">
+    <h1 class="text-2xl font-semibold mb-4 font-header text-center "> مدیریت اعضا</h1>
+
+    <form [formGroup]="librarianForm" novalidate >
+
+      <section class="">
+        <label  class="block text-sm font-medium font-titles text-gray-500 ">  شناسه : </label>
+        <mat-icon  class="text-blue-400 align-middle absolute mr-2 mt-4  ">perm_identity</mat-icon>
+          <input matInput type="text"
+          class=" font-header text-gray-700 mt-1 p-3 pr-10  rounded-md border
+          border-blue-400 outline-none " formControlName="id">
+        </section>
+
+
+        <section class="">
+          <label for="fullname" class="block text-sm font-medium font-titles text-gray-500 ">  نام و نام خانوادگی : </label>
+          <mat-icon  class="text-blue-400 align-middle absolute mr-2 mt-4  ">person</mat-icon>
+          <input matInput type="text" id="fullname" name="fullname"
+          class=" font-header text-gray-700 mt-1 p-3 pr-10  rounded-md border
+           border-blue-400 outline-none " formControlName="fullname">
+           @if (librarianForm.controls.fullname.invalid &&
+           (librarianForm.controls.fullname.dirty || librarianForm.controls.fullname.touched)) {
+             <mat-error class="block font-header text-red-500 text-xs m-2  "> نام و نام خانوادگی   <strong>الزامیست</strong></mat-error>
+           }
+        </section>
+
+        <section class="">
+          <label for="title" class="block text-sm font-medium font-titles text-gray-500 ">  جنسیت : </label>
+          <mat-icon  class="text-blue-400 align-middle absolute mr-2 mt-4  ">male</mat-icon>
+          <input matInput type="text" id="gender" name="gender"
+          class=" font-header text-gray-700 mt-1 p-3 pr-10  rounded-md border
+           border-blue-400 outline-none " formControlName="gender">
+           @if (librarianForm.controls.gender.invalid &&
+           (librarianForm.controls.gender.dirty || librarianForm.controls.gender.touched)) {
+             <mat-error class="block font-header text-red-500 text-xs m-2  "> جنسیت  <strong>الزامیست</strong></mat-error>
+           }
+        </section>
+
+        <section class="">
+          <label for="phone" class="block text-sm font-medium font-titles text-gray-500 ">  تلفن : </label>
+          <mat-icon  class="text-blue-400 align-middle absolute mr-2 mt-4  ">mobile_friendly</mat-icon>
+          <input matInput type="text" id="phone" name="phone"
+          class=" font-header text-gray-700 mt-1 p-3 pr-10  rounded-md border
+          border-blue-400 outline-none " formControlName="phoneNumber">
+          @if (librarianForm.controls.phoneNumber.invalid &&
+          (librarianForm.controls.phoneNumber.dirty || librarianForm.controls.phoneNumber.touched)) {
+            <mat-error class="block font-header text-red-500 text-xs m-2  "> تلفن  <strong>الزامیست</strong></mat-error>
+          }
+        </section>
+
+        <section class="">
+          <label for="address" class="block text-sm font-medium font-titles text-gray-500 ">  آدرس : </label>
+          <mat-icon  class="text-blue-400 align-middle absolute mr-2 mt-4  ">location_on</mat-icon>
+          <input matInput type="address" id="address" name="address"
+          class=" font-header text-gray-700 mt-1 p-3 pr-10  rounded-md border
+          border-blue-400 outline-none " formControlName="address">
+        </section>
+        <button  [disabled]="librarianForm.invalid" class="bg-blue-500 text-white p-2 w-full rounded-md mt-3 hover:bg-blue-600 disabled:bg-gray-400 font-header ">
+          <mat-icon class="align-bottom mx-1 ">save</mat-icon>
+          ثبت
+        </button>
+        <button  class="bg-white text-black p-2 w-full rounded-md mt-3 border  ">بازگشت</button>
+      </form>
+
+  </section>
+</section>
+
