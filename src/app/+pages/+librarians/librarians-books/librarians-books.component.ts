@@ -3,6 +3,7 @@ import { BookService } from '../../../+services/book.service';
 import { Book } from '../../../+models/book';
 import { MatTableModule } from '@angular/material/table';
 import { BookDetailsComponent } from './book-details/book-details.component';
+import { MatIconModule } from '@angular/material/icon';
 
 
 @Component({
@@ -10,8 +11,8 @@ import { BookDetailsComponent } from './book-details/book-details.component';
   standalone: true,
   imports: [
     MatTableModule,
-    BookDetailsComponent
-
+    BookDetailsComponent,
+    MatIconModule,
   ],
   templateUrl: './librarians-books.component.html',
   styleUrl: './librarians-books.component.scss'
