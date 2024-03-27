@@ -3,7 +3,11 @@
       [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'"
       [mode]="(isHandset$ | async) ? 'over' : 'side'"
       [opened]="(isHandset$ | async) === false">
-    <mat-toolbar>Public</mat-toolbar>
+    <mat-toolbar>
+      <span class="font-titles text-center w-full text-purple-800 font-bold ">
+        عمومی
+      </span>
+    </mat-toolbar>
     <mat-nav-list>
       <a  mat-list-item  routerLink="home">
 
@@ -34,7 +38,7 @@
           <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
         </button>
       }
-      <span>Novin.Library_two.Frontend</span>
+      <span class="font-header">سامانه کتابداری آنیا</span>
     </mat-toolbar>
     <section>
       <router-outlet/>
