@@ -1,0 +1,68 @@
+
+<section class="bg-gray-100 flex items-center justify-center h-screen   ">
+
+  <section class="bg-white p-8 rounded-lg shadow-lg w-90">
+    <h1 class="text-2xl font-semibold mb-4 font-header text-center "> مدیریت کتاب</h1>
+
+    <form [formGroup]="bookForm" novalidate >
+
+      <section class="">
+        <label for="id" class="block text-sm font-medium font-titles text-gray-500 ">  شناسه : </label>
+        <mat-icon  class="text-blue-400 align-middle absolute mr-2 mt-4  ">perm_identity</mat-icon>
+          <input matInput type="text" id="id" name="id"
+          class=" font-header text-gray-700 mt-1 p-3 pr-10  rounded-md border
+          border-blue-400 outline-none " formControlName="id">
+        </section>
+
+
+        <section class="">
+          <label for="title" class="block text-sm font-medium font-titles text-gray-500 ">  عنوان : </label>
+          <mat-icon  class="text-blue-400 align-middle absolute mr-2 mt-4  ">title</mat-icon>
+          <input matInput type="text" id="title" name="title"
+          class=" font-header text-gray-700 mt-1 p-3 pr-10  rounded-md border
+           border-blue-400 outline-none " formControlName="title">
+           @if (bookForm.controls.title.invalid &&
+           (bookForm.controls.title.dirty || bookForm.controls.title.touched)) {
+             <mat-error class="block font-header text-red-500 text-xs m-2  "> عنوان  <strong>الزامیست</strong></mat-error>
+           }
+        </section>
+
+        <section class="">
+          <label for="title" class="block text-sm font-medium font-titles text-gray-500 ">  نویسنده : </label>
+          <mat-icon  class="text-blue-400 align-middle absolute mr-2 mt-4  ">notes</mat-icon>
+          <input matInput type="text" id="writer" name="writer"
+          class=" font-header text-gray-700 mt-1 p-3 pr-10  rounded-md border
+           border-blue-400 outline-none " formControlName="writer">
+           @if (bookForm.controls.writer.invalid &&
+           (bookForm.controls.writer.dirty || bookForm.controls.writer.touched)) {
+             <mat-error class="block font-header text-red-500 text-xs m-2  "> نویسنده  <strong>الزامیست</strong></mat-error>
+           }
+        </section>
+
+        <section class="">
+          <label for="publisher" class="block text-sm font-medium font-titles text-gray-500 ">  ناشر : </label>
+          <mat-icon  class="text-blue-400 align-middle absolute mr-2 mt-4  ">publish</mat-icon>
+          <input matInput type="text" id="publisher" name="publisher"
+          class=" font-header text-gray-700 mt-1 p-3 pr-10  rounded-md border
+          border-blue-400 outline-none " formControlName="publisher">
+          @if (bookForm.controls.publisher.invalid &&
+          (bookForm.controls.publisher.dirty || bookForm.controls.publisher.touched)) {
+            <mat-error class="block font-header text-red-500 text-xs m-2  "> ناشر  <strong>الزامیست</strong></mat-error>
+          }
+        </section>
+
+        <section class="">
+          <label for="price" class="block text-sm font-medium font-titles text-gray-500 ">  قیمت : </label>
+          <mat-icon  class="text-blue-400 align-middle absolute mr-2 mt-4  ">attach_money</mat-icon>
+          <input matInput type="price" id="price" name="price"
+          class=" font-header text-gray-700 mt-1 p-3 pr-10  rounded-md border
+          border-blue-400 outline-none " formControlName="price">
+        </section>
+
+        <button  [disabled]="bookForm.invalid" class="bg-blue-500 text-white p-2 w-full rounded-md mt-3 hover:bg-blue-600 disabled:bg-gray-400 font-header ">ثبت</button>
+
+      </form>
+
+  </section>
+</section>
+
